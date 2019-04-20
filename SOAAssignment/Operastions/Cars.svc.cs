@@ -21,7 +21,7 @@ namespace SOAAssignment.Operastions
 
         public Car CreateCar()
         {
-            throw new NotImplementedException();
+            return CarMock.SingleCar();
         }
 
         public Car DeleteCar()

@@ -49,5 +49,22 @@ namespace SOAAssignment.Mocks
             return Cars;
         }
 
+        public static Car SingleCar()
+        {
+            return new Car
+            {
+                Brand = "BMW",
+                Model = "315",
+                LicenceAge = 2,
+                DriverAge = 23,
+                CurrentKm = 90000,
+                DailyMaxKm = 240,
+                HasAirBag = true,
+                LuggageVolume = 350,
+                NumSeats = 5,
+                RentPrice = 220
+            }; ;
+        }
+
     }
 }
