@@ -1,4 +1,5 @@
-﻿using SOAAssignment.Models;
+﻿using SOAAssignment.Enums;
+using SOAAssignment.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,7 +25,7 @@ namespace SOAAssignment.Mocks
                 DriverAge = 25,
                 CurrentKm = 78000,
                 DailyMaxKm = 250,
-                HasAirBag = true,
+                HasAirBag = AirgBagEnum.Yes,
                 LuggageVolume = 550,
                 NumSeats = 4,
                 RentPrice = 250
@@ -39,7 +40,7 @@ namespace SOAAssignment.Mocks
                 DriverAge = 23,
                 CurrentKm = 90000,
                 DailyMaxKm = 240,
-                HasAirBag = true,
+                HasAirBag = AirgBagEnum.Yes,
                 LuggageVolume = 350,
                 NumSeats = 5,
                 RentPrice = 220
@@ -59,7 +60,7 @@ namespace SOAAssignment.Mocks
                 DriverAge = 23,
                 CurrentKm = 90000,
                 DailyMaxKm = 240,
-                HasAirBag = true,
+                HasAirBag = AirgBagEnum.Yes,
                 LuggageVolume = 350,
                 NumSeats = 5,
                 RentPrice = 220
