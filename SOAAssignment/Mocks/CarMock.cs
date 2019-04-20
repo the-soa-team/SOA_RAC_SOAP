@@ -9,7 +9,8 @@ namespace SOAAssignment.Mocks
     public static class CarMock
     {
 
-        public static List<Car> ListCars() {
+        public static List<Car> MultipleCars()
+        {
 
             List<Car> Cars = new List<Car>();
 

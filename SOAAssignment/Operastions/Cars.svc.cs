@@ -16,7 +16,7 @@ namespace SOAAssignment.Operastions
 
         public List<Car> ListCars()
         {
-            return CarMock.ListCars();
+            return CarMock.MultipleCars();
         }
 
         public Car CreateCar()
