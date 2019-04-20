@@ -1,5 +1,6 @@
 ﻿using SOAAssignment.Mocks;
 using SOAAssignment.Models;
+using SOAAssignment.RequestObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,7 @@ namespace SOAAssignment.Operastions
     public class Cars : ICars
     {
 
-        public List<Car> ListCars()
+        public List<Car> ListCars(CarRequest Request)
         {
             return CarMock.MultipleCars();
         }
@@ -24,19 +25,19 @@ namespace SOAAssignment.Operastions
             return Entity;
         }
 
-        public Car DeleteCar()
+        public Car DeleteCar(int CardId)
         {
-            throw new NotImplementedException();
+            return CarMock.SingleCar();
         }
 
-        public Car GetCar()
+        public Car GetCar(int CardId)
         {
-            throw new NotImplementedException();
+            return CarMock.SingleCar();
         }
 
-        public Car UpdateCar()
+        public Car UpdateCar(Car Entity)
         {
-            throw new NotImplementedException();
+            return Entity;
         }
     }
 }

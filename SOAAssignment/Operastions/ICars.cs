@@ -1,4 +1,5 @@
 ﻿using SOAAssignment.Models;
+using SOAAssignment.RequestObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,18 +14,18 @@ namespace SOAAssignment.Operastions
     public interface ICars
     {
         [OperationContract]
-        List<Car> ListCars();
+        List<Car> ListCars(CarRequest Request);
 
         [OperationContract]
         Car CreateCar(Car Entyity);
 
         [OperationContract]
-        Car GetCar();
+        Car GetCar(int CardId);
 
         [OperationContract]
-        Car UpdateCar();
+        Car UpdateCar(Car Entyity);
 
         [OperationContract]
-        Car DeleteCar();
+        Car DeleteCar(int CardId);
     }
 }
