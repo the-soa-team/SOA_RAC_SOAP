@@ -19,9 +19,9 @@ namespace SOAAssignment.Operastions
             return CarMock.MultipleCars();
         }
 
-        public Car CreateCar()
+        public Car CreateCar(Car Entity)
         {
-            return CarMock.SingleCar();
+            return Entity;
         }
 
         public Car DeleteCar()

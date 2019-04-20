@@ -16,7 +16,7 @@ namespace SOAAssignment.Operastions
         List<Car> ListCars();
 
         [OperationContract]
-        Car CreateCar();
+        Car CreateCar(Car Entyity);
 
         [OperationContract]
         Car GetCar();
