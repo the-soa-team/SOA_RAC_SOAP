@@ -14,7 +14,7 @@ namespace SOAAssignment.Operastions
     public interface ICars
     {
         [OperationContract]
-        List<Car> ListCars(CarRequest Request);
+        Car[] ListCars(CarRequest Request = null);
 
         [OperationContract]
         Car CreateCar(Car Entyity);
