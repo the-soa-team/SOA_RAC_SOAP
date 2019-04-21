@@ -19,6 +19,7 @@ namespace SOAAssignment.Mocks
 
             Car = new Car
             {
+                ID = 1,
                 Brand = "Mercedes",
                 Model = "CLS 300",
                 LicenceAge = 3,
@@ -34,6 +35,7 @@ namespace SOAAssignment.Mocks
 
             Car = new Car
             {
+                ID = 2,
                 Brand = "BMW",
                 Model = "315",
                 LicenceAge = 2,
@@ -54,6 +56,7 @@ namespace SOAAssignment.Mocks
         {
             return new Car
             {
+                ID = 1,
                 Brand = "BMW",
                 Model = "315",
                 LicenceAge = 2,
