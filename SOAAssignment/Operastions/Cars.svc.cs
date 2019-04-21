@@ -17,7 +17,7 @@ namespace SOAAssignment.Operastions
 
         public Car[] ListCars(CarRequest Request = null)
         {
-            return CarMock.MultipleCars();
+            return CarMock.MultipleCars().ToArray();
         }
 
         public Car CreateCar(Car Entity)
