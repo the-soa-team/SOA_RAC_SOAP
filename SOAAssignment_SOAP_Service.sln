@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.489
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOAAssignment", "SOAAssignment\SOAAssignment.csproj", "{1C81A14F-CEA1-422B-BF1E-E68806E1F054}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOAAssignment_Soap_Service", "SOAAssignment\SOAAssignment_Soap_Service.csproj", "{1C81A14F-CEA1-422B-BF1E-E68806E1F054}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
