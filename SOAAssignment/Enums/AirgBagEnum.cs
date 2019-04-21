@@ -7,7 +7,8 @@ namespace SOAAssignment.Enums
 {
     public enum AirgBagEnum
     {
+        NoMatter = 0,
         Yes = 1,
-        No = 2
+        No = 2,
     }
 }
