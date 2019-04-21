@@ -2,18 +2,20 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Web;
 
 namespace SOAAssignment.RequestObjects
 {
     public class CarRequest
     {
-        public int LicenceAge;
-        public int DriverAge;
-        public int DailyMaxKm;
-        public int LagguageVolumeMin;
-        public AirgBagEnum HasAirBag;
-        public int RentPrice;
-        public int NumSeats;
+        public int LicenceAge = 0;
+        public int DriverAge = 0;
+        public int DailyMaxKm = 0;
+        public int LagguageVolumeMin = 0;
+        [DataMember]
+        public AirgBagEnum HasAirBag = AirgBagEnum.NoMatter;
+        public int RentPrice = 0;
+        public int NumSeats = 0;
     }
 }
