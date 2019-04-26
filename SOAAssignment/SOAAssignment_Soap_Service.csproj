@@ -78,6 +78,7 @@
     <Compile Include="Enums\AirgBagEnum.cs" />
     <Compile Include="Mocks\CustomerMock.cs" />
     <Compile Include="Mocks\CarMock.cs" />
+    <Compile Include="Models\Customer .cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Car.cs" />
     <Compile Include="Operastions\Cars.svc.cs">
