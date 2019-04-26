@@ -9,13 +9,14 @@ namespace SOAAssignment.RequestObjects
 {
     public class CarRequest
     {
-        public int LicenceAge = 0;
-        public int DriverAge = 0;
-        public int DailyMaxKm = 0;
-        public int LagguageVolumeMin = 0;
+        public int CompanyId;
+        public int LicenceAge;
+        public int DriverAge;
+        public int DailyMaxKm;
+        public int LagguageVolumeMin;
         [DataMember]
-        public AirgBagEnum HasAirBag = AirgBagEnum.NoMatter;
-        public int RentPrice = 0;
-        public int NumSeats = 0;
+        public AirgBagEnum HasAirBag;
+        public int RentPrice;
+        public int NumSeats;
     }
 }
