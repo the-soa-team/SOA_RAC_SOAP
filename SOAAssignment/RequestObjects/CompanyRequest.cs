@@ -9,10 +9,10 @@ namespace SOAAssignment.RequestObjects
 {
     public class CompanyRequest
     {
-        public string Name = "";
-        public string City = "";
-        public string Address = "";
-        public int NumCars = 0;
-        public int Score = 0;
+        public string Name;
+        public string City;
+        public string Address;
+        public int NumCars;
+        public int Score;
     }
 }
