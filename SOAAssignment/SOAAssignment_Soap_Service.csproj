@@ -71,25 +71,40 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Operastions\Cars.svc" />
+    <Content Include="Operastions\Companies.svc" />
     <Content Include="Operastions\Customers.svc" />
+    <Content Include="Operastions\Transactions.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enums\AirgBagEnum.cs" />
+    <Compile Include="Mocks\CompanyMock.cs" />
+    <Compile Include="Mocks\TransactionMock.cs" />
     <Compile Include="Mocks\CustomerMock.cs" />
     <Compile Include="Mocks\CarMock.cs" />
-    <Compile Include="Models\Customer .cs" />
+    <Compile Include="Models\Transaction.cs" />
+    <Compile Include="Models\Company.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Car.cs" />
     <Compile Include="Operastions\Cars.svc.cs">
       <DependentUpon>Cars.svc</DependentUpon>
     </Compile>
+    <Compile Include="Operastions\Companies.svc.cs">
+      <DependentUpon>Companies.svc</DependentUpon>
+    </Compile>
     <Compile Include="Operastions\Customers.svc.cs">
       <DependentUpon>Customers.svc</DependentUpon>
     </Compile>
     <Compile Include="Operastions\ICars.cs" />
+    <Compile Include="Operastions\ICompanies.cs" />
     <Compile Include="Operastions\ICustomers.cs" />
+    <Compile Include="Operastions\ITransactions.cs" />
+    <Compile Include="Operastions\Transactions.svc.cs">
+      <DependentUpon>Transactions.svc</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequestObjects\TransactionRequest.cs" />
+    <Compile Include="RequestObjects\CompanyRequest.cs" />
     <Compile Include="RequestObjects\CustomerRequest.cs" />
     <Compile Include="RequestObjects\CarRequest.cs" />
   </ItemGroup>
