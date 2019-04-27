@@ -9,6 +9,7 @@ namespace SOAAssignment.RequestObjects
 {
     public class UserRequest
     {
+        public int CompanyId;
         public string FirstName;
         public string LastName;
         public string EmailAddress;
