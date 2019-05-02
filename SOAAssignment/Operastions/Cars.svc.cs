@@ -1,5 +1,7 @@
-﻿using SOAAssignment.Mocks;
+﻿using RentACar.Bll.Concretes;
+using SOAAssignment.Mocks;
 using SOAAssignment.Models;
+using BLLModels = RentACar.Model.EntityModels;
 using SOAAssignment.RequestObjects;
 using System;
 using System.Collections.Generic;
@@ -17,12 +19,72 @@ namespace SOAAssignment.Operastions
 
         public Car[] ListCars(CarRequest Request = null)
         {
-            return CarMock.MultipleCars().ToArray();
+            try
+            {
+                using (var CarManager = new CarManager())
+                {
+                    List<BLLModels.Cars> newEntities = CarManager.SelectAll();
+
+                    List<Car> ReturnCars = new List<Car>();
+                    foreach(BLLModels.Cars newEntity in newEntities)
+                    {
+                        ReturnCars.Add(new Car()
+                        {
+                            ID = newEntity.CarID,
+                            CompanyId = newEntity.CompanyID.Value,
+                            Brand = newEntity.Brand,
+                            Model = newEntity.Model,
+                            CurrentKm = newEntity.CurrentKm.Value,
+                            DailyMaxKm = newEntity.DailyKm.Value,
+                            DriverAge = newEntity.CarDriverAge.Value,
+                            LicenceAge = newEntity.CarLicenceAge.Value,
+                            HasAirBag = newEntity.HasAirbag.Value ? Enums.AirgBagEnum.Yes : Enums.AirgBagEnum.No,
+                            LuggageVolume = newEntity.LuggageValume.Value,
+                            NumSeats = newEntity.NumSeats.Value,
+                            RentPrice = newEntity.RentPrice.Value
+                        });
+                    }
+
+                    return ReturnCars.ToArray();
+                }
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
 
         public Car CreateCar(Car Entity)
         {
-            return Entity;
+
+            try
+            {
+                using (var CarManager = new CarManager())
+                {
+                    BLLModels.Cars entity = new BLLModels.Cars();
+                    var newEntity = CarManager.Insert(entity);
+                    
+                    return new Car()
+                    {
+                        ID = newEntity.CarID,
+                        CompanyId = newEntity.CompanyID.Value,
+                        Brand = newEntity.Brand,
+                        Model = newEntity.Model,
+                        CurrentKm = newEntity.CurrentKm.Value,
+                        DailyMaxKm = newEntity.DailyKm.Value,
+                        DriverAge = newEntity.CarDriverAge.Value,
+                        LicenceAge = newEntity.CarLicenceAge.Value,
+                        HasAirBag = newEntity.HasAirbag.Value ? Enums.AirgBagEnum.Yes : Enums.AirgBagEnum.No,
+                        LuggageVolume = newEntity.LuggageValume.Value,
+                        NumSeats = newEntity.NumSeats.Value,
+                        RentPrice = newEntity.RentPrice.Value
+                    };
+                }
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
 
         public Car DeleteCar(int CardId)
@@ -38,6 +100,11 @@ namespace SOAAssignment.Operastions
         public Car UpdateCar(Car Entity)
         {
             return Entity;
+        }
+
+        public Car[] ListAvailableCars(AviableCarRequest Request = null)
+        {
+            return CarMock.MultipleCars().ToArray();
         }
     }
 }

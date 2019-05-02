@@ -27,5 +27,8 @@ namespace SOAAssignment.Operastions
 
         [OperationContract]
         Car DeleteCar(int CardId);
+
+        [OperationContract]
+        Car[] ListAvailableCars(AviableCarRequest Request = null);
     }
 }

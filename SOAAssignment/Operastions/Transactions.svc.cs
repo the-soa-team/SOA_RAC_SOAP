@@ -19,9 +19,9 @@ namespace SOAAssignment.Operastions
             return TransactionMock.MultipleTransactions().ToArray();
         }
 
-        public Transaction CreateTransaction(Transaction Entity)
+        public Transaction CreateTransaction(Customer Customer, Car Car, DateTime DateBegin, int NumDays)
         {
-            return Entity;
+            return new Transaction();
         }
 
         public Transaction DeleteTransaction(int TransactiondId)

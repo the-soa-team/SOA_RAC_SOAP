@@ -17,7 +17,7 @@ namespace SOAAssignment.Operastions
         Transaction[] ListTransactions(TransactionRequest Request = null);
 
         [OperationContract]
-        Transaction CreateTransaction(Transaction Entyity);
+        Transaction CreateTransaction(Customer Customer, Car Car, DateTime DateBegin, int NumDays);
 
         [OperationContract]
         Transaction GetTransaction(int TransactiondId);

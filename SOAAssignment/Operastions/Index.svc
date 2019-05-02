@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="SOAAssignment.Operastions.Index" CodeBehind="Index.svc.cs" %>
